@@ -105,6 +105,9 @@ echo -e "${YELLOW}Using SSH port:${GREEN}" $SSHPORT
 echo -e "${NC}"
 sleep 2
 
+#get BIND IP
+BINDIP=$(hostname -I)
+
 #get WAN IP ask user to verify it and or change it if needed 
 WANIP=$(wget http://ipecho.net/plain -O - -q)
 echo -e 'Detected IP Address is' $WANIP
@@ -176,7 +179,7 @@ fi
     echo "listen=1" >> ~/.zelcash/$CONFIG_FILE
     echo "logtimestamps=1" >> ~/.zelcash/$CONFIG_FILE
     echo "externalip=$WANIP" >> ~/.zelcash/$CONFIG_FILE
-    echo "bind=$WANIP" >> ~/.zelcash/$CONFIG_FILE
+    echo "bind=$BINDIP" >> ~/.zelcash/$CONFIG_FILE
     echo "addnode=explorer.zel.cash" >> ~/.zelcash/$CONFIG_FILE
     echo "addnode=explorer.zel.zelcore.io" >> ~/.zelcash/$CONFIG_FILE
     echo "addnode=explorer2.zel.cash" >> ~/.zelcash/$CONFIG_FILE
