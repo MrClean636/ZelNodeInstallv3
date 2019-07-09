@@ -25,7 +25,7 @@
 COIN_NAME='zelcash'
 
 #wallet information
-WALLET_BOOTSTRAP='https://apt.zel.cash/zelcashbootstraptxindex.zip'
+WALLET_BOOTSTRAP='https://zelcore.io/zelcashbootstraptxindex.zip'
 BOOTSTRAP_ZIP_FILE='zelcashbootstraptxindex.zip'
 ZIPTAR='unzip'
 CONFIG_FILE='zelcash.conf'
